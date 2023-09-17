@@ -1,0 +1,309 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+body{
+    background: rgb(1, 1, 24);
+}
+
+.header{
+    display: flex;
+    width: 100%;
+    height: 70px;
+   margin-bottom: 16px;
+}
+
+.logo{
+    font-size: 50px;
+    color: teal;
+    padding: 10px;
+    margin-left: 20px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.btn-group{
+    display: flex;
+    min-width: 500px;
+  margin-left: 200px;
+}
+
+.btn{
+    padding: 7px;
+    margin: 5px;
+    width: 90px;
+    border-radius: 10px;
+    border:none;
+    outline:none;
+    margin-top: 20px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgba(112, 101, 101, 0.3);
+    color:white;
+    font-size: 1rem;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.sidematerials{
+    display: flex;
+   margin-right: 10px;
+   justify-content: space-between;
+}
+
+/* .sidematerials .running-clock{
+    background-color: yellow;
+    width: 60px;
+    border-radius: 50%;
+} */
+
+.sidematerials a{
+ text-decoration: none;
+ color: white;
+ text-transform: capitalize;
+ list-style: none;
+}
+
+.sidematerials div.telebtn {
+    margin: 10px;
+    padding: 6px 20px;
+    border-radius: 10px;
+    background-color: #3dc6c1;
+    color: #fff;
+    font-size: 1.3rem;
+    line-height: 1.5;
+   cursor: pointer;
+   margin-right: 30px;
+}
+/* dark mode toggle */
+
+
+
+.input{
+    visibility: hidden;
+}
+
+.label{
+    width: 80px;
+    height: 40px;
+    background-color: lightgray;
+    position: absolute;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 10px;
+    margin-right: 20px;
+    text-align: right;
+}
+
+.circle{
+    width: 34px;
+    height: 34px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    animation: toggleOff .4s linear forwards;
+}
+
+.input:checked + .label{
+    background-color: #fff;
+}
+
+.input:checked + .label .circle{
+    animation: toggleOn .4s linear forwards;
+    background-color: rgb(3, 1, 15);
+}
+
+@keyframes toggleOn {
+    0%{
+        transform: translateX(0);
+    }
+
+    100%{
+        transform: translateX(40px);
+    }
+}
+
+@keyframes toggleOff {
+    0%{
+        transform: translateX(40px);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+}
+
+
+
+/* main section */
+
+.main-section{
+    padding: 0px 30px;
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+.text-center{
+    width: 100px;
+    height: 100px;
+    margin-top: 40px;
+}
+
+.text-center .subtext{
+    font-size: 2.2rem;
+    color: #3dc6c1;
+}
+
+.text-center .subheading{
+    font-size: 1.2rem;
+    color:darkgray;
+}
+
+.borodiv{
+    max-width: 40%;
+}
+.borodiv .textdiv{
+    margin-bottom: 20px;
+}
+.textdiv .maintext{
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.75px;
+}
+.borodiv .textdiv .maintext .subtexts{
+    text-transform: capitalize;
+    color: darkgray;
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+}
+
+.borodiv .main-rupee{
+    font-size: 63px;
+   padding-bottom: 10px;
+   margin-top: 10px;
+   color:rgb(230, 216, 216);
+   line-height: 1.5;
+   letter-spacing: 2px;
+}
+
+.borodiv .average-text{
+    font-size: 1rem;
+    color:darkgray;
+   
+    text-transform: capitalize;
+}
+
+/* table */
+
+.table-section{
+    margin: 0px auto;
+}
+
+.crypto-table{
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    border-collapse:collapse;
+    text-align: center;
+    color:#212529;
+    margin-top: 10px;
+    
+}
+.crypto-table tbody .middle{
+    vertical-align: middle;
+    display: table-cell;
+    margin-bottom: 10px;
+}
+.crypto-table td, .crypto-table th{
+    padding: .75rem;
+    vertical-align: top;
+    
+    /* border-top: 1px solid #dee2e6; */
+}
+.crypto-table thead th{
+    vertical-align: bottom;
+    padding: 0 13px;
+}
+.crypto-table span.pointer{
+    font-size: 25px;
+    padding: 0px 10px;
+    color: rgb(155, 154, 154);
+}
+
+.crypto-table tbody tr{
+    width: 100%;
+    background-color: rgba(145, 128, 128, 0.3);
+    color: #3dc6c1;
+   
+}
+.crypto-table .color-red{
+    color: red;
+}
+.crypto-table tbody .middle h4{
+    font-size: 23px;
+}
+.crypto-table tbody .middle .table-name{
+    font-size: 20px;
+}
+
+/* footer */
+
+.footer{
+    width: 100%;
+    height: 100%;
+    margin-top: 40px;
+}
+
+.footer .footer-div{
+    display: flex;
+    min-width: 100%;
+    background-color:#191d28;
+}
+
+.footer-div .footer-text-link{
+    text-decoration: none;
+    font-size: 20px;
+    margin: 0 20px;
+    color: darkgray;
+    cursor: pointer;
+   
+}
+
+.footer .footer-div .footer-text{
+    font-size: 20px;
+    color: darkgray;
+    cursor: pointer;
+}
+
+.d-flex{
+    display: flex;
+    justify-content: center;
+    border:solid 1px #191d28;
+    background-color:#191d28;
+    /* position:fixed;
+    left:0; */
+    align-items:center;
+    width:100vw;
+    height:47px;
+    bottom:0;
+    z-index:8;
+
+}
+
+.d-flex button{
+    background: transparent;
+    color:#3dc6c1;
+    border: 1px solid #3dc6c1;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+.d-flex button:hover{
+    background-color: #3dc6c1;
+    color:white;
+}
+
